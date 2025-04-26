@@ -5,8 +5,7 @@
 
 ---
 
-> **ContX: Scene Context Prediction via Context Bank and Layout Perception**
-> 
+> **ContX: Scene Context Prediction via Context Bank and Layout Perception**  
 Jingxin Liang, Yangyang Xu, Haorui Song, Yuqin Lu, Yuhui Deng, Yiyi Long, Yan Huang, Shengxin Liu, Jianbo Jiao, Shengfeng He
 > 
 
