@@ -1,7 +1,7 @@
 
 # ContX: Scene Context Prediction via Context Bank and Layout Perception
 
-![architecture.png](architecture.png)
+![architecture.png](./pics/architecture.png)
 
 ---
 
@@ -23,6 +23,12 @@ Jingxin Liang, Yangyang Xu, Haorui Song, Yuqin Lu, Yuhui Deng, Yiyi Long, Yan Hu
 - [ ]  Pre-trained model
 - [ ]  Evaluation scripts
 
+## Installation
+The code is developed under the following environment:
+
+Python 3.8.5
+CUDA 11.3
+PyTorch 1.13.0
 ## Train
 
 To train our ContX model, please prepare the data file and put it into `./config/contx_clip_sp.yaml`, then run:
