@@ -1,8 +1,6 @@
 
 # ContX: Scene Context Prediction via Context Bank and Layout Perception
 
----
-
 ![architecture.png](architecture.png)
 
 ---
@@ -19,7 +17,7 @@ Jingxin Liang, Yangyang Xu, Haorui Song, Yuqin Lu, Yuhui Deng, Yiyi Long, Yan Hu
 
 - [x]  Training & inference code for scene context prediction
 
-**[Coming Soon]**
+**[Coming Soon...]**
 
 - [ ]  Training & testing dataset for scene context prediction
 - [ ]  Pre-trained model
