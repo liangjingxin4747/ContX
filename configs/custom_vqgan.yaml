@@ -1,0 +1,52 @@
+model:
+  base_learning_rate: 4.5e-06
+  target: taming.models.vqgan.VQModel
+  params:
+    embed_dim: 256
+    n_embed: 1024
+    noise_dim: 64
+    ddconfig:
+      double_z: false
+      z_channels: 256
+      resolution: 256
+      in_channels: 87
+      out_ch: 87
+      ch: 128
+      ch_mult:
+      - 1
+      - 1
+      - 2
+      - 2
+      - 4
+      num_res_blocks: 2
+      attn_resolutions:
+      - 16
+      dropout: 0.0
+      add_noise: false
+    lossconfig:
+      target: taming.modules.losses.vqperceptual.VQLPIPSWithDiscriminator
+      params:
+        disc_conditional: true
+        disc_in_channels: 174
+        disc_start: 25000
+        disc_weight: 0.8
+        codebook_weight: 1.0
+        rec_weight: 1
+        div_weight: 0.5
+data:
+  target: main.DataModuleFromConfig
+  params:
+    batch_size: 10
+    num_workers: 8
+    train:
+      target: taming.data.custom.CustomTrain
+      params:
+        training_images_list_file: ./ljx_train.txt
+        training_images_dis_file: ./ljx_train_dis.txt
+        size: 128
+    validation:
+      target: taming.data.custom.CustomTest
+      params:
+        test_images_list_file: ./ljx_test.txt
+        test_images_dis_file: ./ljx_test_dis.txt
+        size: 128
