@@ -1,4 +1,3 @@
-# README
 
 # ContX: Scene Context Prediction via Context Bank and Layout Perception
 
@@ -8,7 +7,7 @@
 
 ---
 
-> ContX: Scene Context Prediction via Context Bank and Layout Perception
+> **ContX: Scene Context Prediction via Context Bank and Layout Perception**
 Jingxin Liang, Yangyang Xu, Haorui Song, Yuqin Lu, Yuhui Deng, Yiyi Long, Yan Huang, Shengxin Liu, Jianbo Jiao, Shengfeng He
 > 
 
@@ -27,3 +26,21 @@ tative assessments.
 - [ ]  Training & testing dataset for scene context prediction
 - [ ]  Pre-trained model
 - [ ]  Evaluation scripts
+
+## Train
+
+---
+
+To train our ContX model, please prepare the data file and put it into `./config/contx_clip_sp.yaml`, then run:
+```
+python main.py --base configs/custom_vqgan_SPRef.yaml -t True --gpus 0,
+```
+
+## Inference
+
+---
+
+To predict scene context using contx, please run:
+```
+python predict.py
+```
